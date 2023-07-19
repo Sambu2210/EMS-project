@@ -1,0 +1,51 @@
+.profile-bg {
+  height: 200px;
+  margin-top: -137.8px;
+  border-radius: 12px;
+  box-shadow: 0 20px 27px rgb(0 0 0 / 5%);
+  background-size: cover;
+  background-position: 50%;
+}
+.card-heading .ant-card-head {
+  margin-top: -50px;
+  border: none;
+}
+.ant-card-head {
+  border: none !important;
+}
+.card-heading .ant-card-body {
+  display: none;
+}
+.card-heading .ant-avatar-group {
+  margin-top: 3px;
+}
+.avatar-info {
+  margin-inline-start: 10px !important;
+}
+.ant-card {
+  box-shadow: 0 20px 27px rgb(0 0 0 / 20%) !important;
+  border: none;
+  margin: 0 30px;
+}
+.admin-management {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.admin-management-card {
+  max-width: 100% !important;
+  height: 100%;
+}
+.plan-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.plans {
+  max-width: 400px;
+}
+.card-profile-information {
+  height: 100%;
+}

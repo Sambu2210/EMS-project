@@ -1,0 +1,18 @@
+.login-page {
+  /* background-image: url("/frontend/src/assest/login-bg.jpg"); */
+  background: url("https://images.pexels.com/photos/5380642/pexels-photo-5380642.jpeg");
+  background: linear-gradient(
+    rgba(11, 11, 11, 0.5),
+    rgba(10, 10, 10, 0.5),
+    url("https://images.pexels.com/photos/5380642/pexels-photo-5380642.jpeg")
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.login-form {
+  background-color: rgba(1, 32, 93, 0.6);
+  color: white;
+}
+.login-input {
+  width: 300px;
+}
