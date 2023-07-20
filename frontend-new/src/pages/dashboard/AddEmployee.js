@@ -23,7 +23,7 @@ const AddEmployee = () => {
     formdata.append("address", data.address);
     formdata.append("image", data.image);
     axios
-      .post("http://localhost:3001/create", formdata)
+      .post(process.env.REACT_APP_BACKEND + "/create", formdata)
       .then((res) => {
         navigate("/employee");
       })

@@ -17,7 +17,7 @@ const EmployeeLogin = () => {
   const handelsubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3001/employeelogin/", values)
+      .post(process.env.REACT_APP_BACKEND + "/employeelogin/", values)
       .then((res) => {
         if (res.data.Status === "Success") {
           const id = res.data.id;
@@ -65,9 +65,9 @@ const EmployeeLogin = () => {
             Login
           </button>
           <p>You are agree to terms</p>
-          <button className="btn btn-defualt w-100 bg-light border rounder-0 text-decration-none">
+          {/* <button className="btn btn-defualt w-100 bg-light border rounder-0 text-decration-none">
             Create Account
-          </button>
+          </button> */}
         </form>
       </div>
     </div>

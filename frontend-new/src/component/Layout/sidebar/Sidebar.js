@@ -9,7 +9,7 @@ const Sidebar = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/dashboard")
+      .get(process.env.REACT_APP_BACKEND + "/dashboard")
       .then((res) => {
         if (res.data.Status === "Success") {
           if (res.data.role === "admin") {
@@ -27,7 +27,7 @@ const Sidebar = () => {
 
   const handelLogout = () => {
     axios
-      .get("http://localhost:3001/logout")
+      .get(process.env.REACT_APP_BACKEND + "/logout")
       .then((res) => {
         navigate("/start");
       })
@@ -80,6 +80,15 @@ const Sidebar = () => {
                 >
                   <i className="fs-4 bi-person"></i>{" "}
                   <span className="ms-1 d-none d-sm-inline">Profile</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={"/dashboard"}
+                  className="nav-link text-white px-0 align-middle"
+                >
+                  <i className="fs-4 bi-person"></i>{" "}
+                  <span className="ms-1 d-none d-sm-inline">Stack</span>
                 </Link>
               </li>
               <li onClick={handelLogout}>

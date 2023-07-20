@@ -9,7 +9,7 @@ const EmployeeDetails = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/read/" + id)
+      .get(process.env.REACT_APP_BACKEND + "/read/" + id)
       .then((res) => {
         setEmployee(res.data.Result[0]);
       })
@@ -17,7 +17,7 @@ const EmployeeDetails = () => {
   }, []);
   const handelLogout = () => {
     axios
-      .get("http://localhost:3001/logout")
+      .get(process.env.REACT_APP_BACKEND + "/logout")
       .then((res) => {
         navigate("/start");
       })
@@ -28,7 +28,7 @@ const EmployeeDetails = () => {
   return (
     <div className="d-flex justify-conten-center flex-column align-items-center mt-3">
       <img
-        src={"http://localhost:3001/images/" + employee.image}
+        src={process.env.REACT_APP_BACKEND + "/images/" + employee.image}
         className="empImg"
       />
       <div className="d-flex align-items-center flex-column mt-5">

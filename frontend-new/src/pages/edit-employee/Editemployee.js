@@ -7,7 +7,7 @@ const Editemployee = () => {
   const { id } = useParams();
   useEffect(() => {
     axios
-      .get("http://localhost:3001/read/" + id)
+      .get(process.env.REACT_APP_BACKEND + "/read/" + id)
       .then((res) => {
         console.log(res.data.Result);
         setData({
@@ -30,7 +30,7 @@ const Editemployee = () => {
   const handelsubmit = (e) => {
     e.preventDefault();
     axios
-      .put("http://localhost:3001/edit/" + id, data)
+      .put(process.env.REACT_APP_BACKEND + "/edit/" + id, data)
       .then((res) => {
         navigate("/employee");
       })

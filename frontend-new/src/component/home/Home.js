@@ -7,19 +7,19 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/adminCount")
+      .get(process.env.REACT_APP_BACKEND + "/adminCount")
       .then((res) => {
         setAdmincount(res.data[0].admin);
       })
       .catch((err) => console.log(err));
     axios
-      .get("http://localhost:3001/employeeCount")
+      .get(process.env.REACT_APP_BACKEND + "/employeeCount")
       .then((res) => {
         setEmployeecount(res.data[0].employee);
       })
       .catch((err) => console.log(err));
     axios
-      .get("http://localhost:3001/salary")
+      .get(process.env.REACT_APP_BACKEND + "/salary")
       .then((res) => {
         setSalarycount(res.data[0].sumOfSalary);
       })

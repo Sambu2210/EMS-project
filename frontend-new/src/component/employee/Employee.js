@@ -7,7 +7,7 @@ const Employee = () => {
   const id = useParams();
   useEffect(() => {
     axios
-      .get("http://localhost:3001/getemployee")
+      .get(process.env.REACT_APP_BACKEND + "/getemployee")
       .then((res) => {
         if (res.data.Status === "Success") {
           setData(res.data.Result);
@@ -18,7 +18,7 @@ const Employee = () => {
 
   const handeldelete = (id) => {
     axios
-      .delete("http://localhost:3001/delete/" + id)
+      .delete(process.env.REACT_APP_BACKEND + "/delete/" + id)
       .then((res) => {
         window.location.reload();
       })
@@ -51,7 +51,11 @@ const Employee = () => {
                   <td>{employee.name}</td>
                   <td>
                     <img
-                      src={"http://localhost:3001/images/" + employee.image}
+                      src={
+                        process.env.REACT_APP_BACKEND +
+                        "/images/" +
+                        employee.image
+                      }
                       alt=""
                       className="employee-img"
                     />
