@@ -8,10 +8,9 @@ import multer from "multer";
 import path from "path";
 
 const app = express();
-
 app.use(
   cors({
-    origin: "*",
+    origin: "http://localhost:3000",
     methods: "POST, GET, PUT, DELETE",
     credentials: true,
   })

@@ -25,7 +25,7 @@ const Employee = () => {
       .catch((err) => console.log(err));
   };
   return (
-    <div className="py-3 px-5">
+    <div className="py-3 px-5 employee-page">
       <div className="d-flex justify-content-center">
         <h3>Employees List</h3>
       </div>
@@ -63,7 +63,7 @@ const Employee = () => {
                   <td>{employee.email}</td>
                   <td>{employee.address}</td>
                   <td>{employee.salary}</td>
-                  <td>
+                  <td className="d-flex">
                     <Link to={"/edit/" + employee.id}>
                       <button className="btn btn-primary btn-sm me-2">
                         Edit

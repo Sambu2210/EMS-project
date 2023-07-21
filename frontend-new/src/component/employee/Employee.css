@@ -7,3 +7,16 @@
   max-height: 558px;
   overflow: scroll;
 }
+@media (width: 768px) {
+  .table-page {
+    max-width: 480px;
+  }
+}
+@media (width: 425px) {
+  .table-page {
+    max-width: 307px;
+  }
+  .employee-page {
+    padding: 2rem !important;
+  }
+}
