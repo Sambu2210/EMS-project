@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import "./Login.css";
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const EmployeeLogin = () => {
   const [values, setValues] = useState({
@@ -61,13 +61,21 @@ const EmployeeLogin = () => {
               }
             />
           </div>
+          <div className="mb-2 text-center">
+            <Link to={"/forget-password"} className="text-decoration-none ">
+              Forget Password ?
+            </Link>
+          </div>
           <button type="submit" className="btn btn-success w-100 rounder-0">
             Login
           </button>
           <p>You are agree to terms</p>
-          {/* <button className="btn btn-defualt w-100 bg-light border rounder-0 text-decration-none">
-            Create Account
-          </button> */}
+          <p className="text-center mt-3">
+            Need an account ?{" "}
+            <Link to={"/signup"} className="anchor">
+              SIGN UP
+            </Link>
+          </p>
         </form>
       </div>
     </div>

@@ -18,5 +18,15 @@
   }
   .employee-page {
     padding: 2rem !important;
+    height: 539px;
+  }
+}
+@media (width: 375px) {
+  .table-page {
+    max-width: 257px;
+  }
+  .employee-page {
+    padding: 2rem !important;
+    height: 539px;
   }
 }

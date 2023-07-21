@@ -46,7 +46,7 @@ const Login = () => {
               onChange={(e) => setValues({ ...values, email: e.target.value })}
             />
           </div>
-          <div className="mb-2">
+          <div className="mb-4">
             <label htmlFor="password">
               <strong>Password</strong>
             </label>
@@ -60,21 +60,13 @@ const Login = () => {
               }
             />
           </div>
-          <div className="mb-2 text-center">
-            <Link to={"/forget-password"} className="text-decoration-none ">
-              Forget Password ?
-            </Link>
-          </div>
-          <button type="submit" className="btn btn-success w-100 rounder-0">
+
+          <button
+            type="submit"
+            className="btn btn-success w-100 rounder-0 mb-4"
+          >
             Login
           </button>
-
-          <p className="text-center mt-4">
-            Need an account ?{" "}
-            <Link to={"/signup"} className="anchor">
-              SIGN UP
-            </Link>
-          </p>
         </form>
       </div>
     </div>

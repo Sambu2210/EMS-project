@@ -104,3 +104,25 @@
     margin: 0;
   }
 }
+@media (width: 375px) {
+  .profile {
+    height: 430px;
+    overflow: scroll;
+  }
+  .admin-management {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .plan-grid {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .plans {
+    max-width: 100%;
+  }
+  .plan-card {
+    width: 100%;
+    margin: 0;
+  }
+}

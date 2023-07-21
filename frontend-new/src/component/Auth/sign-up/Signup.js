@@ -78,7 +78,7 @@ const Signup = () => {
 
           <p className="text-center mt-4">
             Already have an account ?{" "}
-            <Link to={"/login"} className="login-anchor">
+            <Link to={"/employeelogin"} className="login-anchor">
               Login
             </Link>
           </p>
