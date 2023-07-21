@@ -3,3 +3,7 @@
   height: 40px;
   border-radius: 50%;
 }
+.table-page {
+  max-height: 558px;
+  overflow: scroll;
+}

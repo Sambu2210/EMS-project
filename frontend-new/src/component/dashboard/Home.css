@@ -1,0 +1,41 @@
+@media (width: 768px) {
+  .home-page {
+    height: 500px;
+    overflow: scroll;
+  }
+  .home-page-row .ant-card {
+    margin: 0 10px;
+  }
+  .chart-component {
+    display: block !important;
+  }
+  .chart {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+}
+@media (width: 425px) {
+  .home-page {
+    height: 500px;
+    overflow: scroll;
+  }
+  .home-page-row {
+    gap: 10px;
+  }
+  .home-page-row .ant-card {
+    margin: 0 30px;
+  }
+  .chart-component {
+    display: block !important;
+  }
+  .chart {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+}
+
+.home-page-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}

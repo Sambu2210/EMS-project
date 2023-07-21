@@ -32,7 +32,7 @@ const Employee = () => {
       <Link to={"/create"}>
         <button className="btn btn-success">Add Employee</button>
       </Link>
-      <div className="mt-3">
+      <div className="mt-3 table-page">
         <table className="table">
           <thead>
             <tr>

@@ -82,15 +82,7 @@ const Sidebar = () => {
                   <span className="ms-1 d-none d-sm-inline">Profile</span>
                 </Link>
               </li>
-              <li>
-                <Link
-                  to={"/dashboard"}
-                  className="nav-link text-white px-0 align-middle"
-                >
-                  <i className="fs-4 bi-person"></i>{" "}
-                  <span className="ms-1 d-none d-sm-inline">Stack</span>
-                </Link>
-              </li>
+
               <li onClick={handelLogout}>
                 <a href="#" className="nav-link text-white px-0 align-middle">
                   <i className="fs-4 bi-power"></i>{" "}

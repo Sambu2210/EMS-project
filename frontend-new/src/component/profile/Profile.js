@@ -41,6 +41,7 @@ const Profile = () => {
         style={{ backgroundImage: "url(" + Bgprofile + ")" }}
         className="profile-bg"
       ></div>
+
       <Card
         className="card-heading"
         title={
@@ -58,69 +59,70 @@ const Profile = () => {
           </Row>
         }
       ></Card>
-      <Row className="admin-management">
-        <Col className="mb-24 admin-management-card">
-          <Card
-            bordered={false}
-            title={<h6 className="font-semibold m-0">User Information</h6>}
-            className="header-solid h-full card-profile-information"
-            // extra={<Button type="link">{pencil}</Button>}
-            bodyStyle={{ paddingTop: 0, paddingBottom: 16 }}
-          >
-            <hr className="my-10" />
-            <Descriptions title="Oliver Liam">
-              <Descriptions.Item label="First Name" span={3}>
-                Admin new
-              </Descriptions.Item>
-              <Descriptions.Item label="Last Name" span={3}>
-                Liam
-              </Descriptions.Item>
-              <Descriptions.Item label="Role" span={3}>
-                Admin
-              </Descriptions.Item>
-              <Descriptions.Item label="Email" span={3}>
-                oliverliam@Infotech.com
-              </Descriptions.Item>
-            </Descriptions>
-          </Card>
-        </Col>
-        <Col className="mb-24 admin-management-card">
-          <Card
-            bordered={false}
-            title={
-              <h6 className="font-semibold m-0">Organization Information</h6>
-            }
-            className="header-solid h-full card-profile-information"
-            bodyStyle={{ paddingTop: 0, paddingBottom: 16 }}
-          >
-            <hr className="my-10" />
-            <Descriptions title="Infotech">
-              <Descriptions.Item label="Organization Name" span={3}>
-                Infotech
-              </Descriptions.Item>
-              <Descriptions.Item label="Organiztion Country" span={3}>
-                United States
-              </Descriptions.Item>
-              <Descriptions.Item label="Organization Domain" span={3}>
-                Infotech.com
-              </Descriptions.Item>
-            </Descriptions>
-          </Card>
-        </Col>
-      </Row>
-      <Card>
-        <Title level={2}>Plans</Title>
-        <Row className="plan-grid">
-          {project.map((p, i) => (
-            <Col key={i} className="plans">
-              <Card>
-                <Title level={2}>{p.title}</Title>
-                <p>{p.disciption}</p>
-              </Card>
-            </Col>
-          ))}
+      <div className="profile">
+        <Row className="admin-management">
+          <Col className="mb-24 admin-management-card">
+            <Card
+              bordered={false}
+              title={<h6 className="font-semibold m-0">User Information</h6>}
+              className="header-solid h-full card-profile-information"
+              bodyStyle={{ paddingTop: 0, paddingBottom: 16 }}
+            >
+              <hr className="my-10" />
+              <Descriptions title="Oliver Liam">
+                <Descriptions.Item label="First Name" span={3}>
+                  Admin new
+                </Descriptions.Item>
+                <Descriptions.Item label="Last Name" span={3}>
+                  Liam
+                </Descriptions.Item>
+                <Descriptions.Item label="Role" span={3}>
+                  Admin
+                </Descriptions.Item>
+                <Descriptions.Item label="Email" span={3}>
+                  oliverliam@Infotech.com
+                </Descriptions.Item>
+              </Descriptions>
+            </Card>
+          </Col>
+          <Col className="mb-24 admin-management-card">
+            <Card
+              bordered={false}
+              title={
+                <h6 className="font-semibold m-0">Organization Information</h6>
+              }
+              className="header-solid h-full card-profile-information"
+              bodyStyle={{ paddingTop: 0, paddingBottom: 16 }}
+            >
+              <hr className="my-10" />
+              <Descriptions title="Infotech">
+                <Descriptions.Item label="Organization Name" span={3}>
+                  Infotech
+                </Descriptions.Item>
+                <Descriptions.Item label="Organiztion Country" span={3}>
+                  United States
+                </Descriptions.Item>
+                <Descriptions.Item label="Organization Domain" span={3}>
+                  Infotech.com
+                </Descriptions.Item>
+              </Descriptions>
+            </Card>
+          </Col>
         </Row>
-      </Card>
+        <Card>
+          <Title level={2}>Plans</Title>
+          <Row className="plan-grid">
+            {project.map((p, i) => (
+              <Col key={i} className="plans">
+                <Card className="h-100 plan-card">
+                  <Title level={2}>{p.title}</Title>
+                  <p>{p.disciption}</p>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        </Card>
+      </div>
     </>
   );
 };

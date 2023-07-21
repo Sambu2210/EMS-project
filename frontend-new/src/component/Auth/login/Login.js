@@ -61,7 +61,9 @@ const Login = () => {
             />
           </div>
           <div className="mb-2 text-center">
-            <Link className="text-decoration-none ">Forget Password ?</Link>
+            <Link to={"/forget-password"} className="text-decoration-none ">
+              Forget Password ?
+            </Link>
           </div>
           <button type="submit" className="btn btn-success w-100 rounder-0">
             Login
